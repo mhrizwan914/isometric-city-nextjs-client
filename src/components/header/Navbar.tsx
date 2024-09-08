@@ -11,11 +11,11 @@ import { CTA } from "@/components"
 import { motion } from "framer-motion"
 
 export default function Navbar() {
-    let variants = {
+    const variants = {
         "hidden": { opacity: 0, y: -40 },
         "visible": { opacity: 1, y: 0 }
     }
-    let transitions = { duration: 0.3, ease: "easeIn" }
+    const transitions = { duration: 0.3, ease: "easeIn" }
     // let transitions = { type: "spring", stiffness: 200, damping: 100 }
 
     return (
