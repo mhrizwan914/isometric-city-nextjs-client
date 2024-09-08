@@ -1,5 +1,5 @@
 // Components
-import { CTA, VideoPlayer } from "@/components"
+import { CTA, VideoPlayer, AnimatedClouds } from "@/components"
 // Framer
 import * as motion from "framer-motion/client"
 // Media
@@ -15,7 +15,10 @@ export default function Hero() {
 
     return (
         <section>
-            <div className="mt-12">
+            <div className="mt-12 relative z-10">
+                <div className="absolute left-0 right-0 top-[230px] -z-10">
+                    <AnimatedClouds />
+                </div>
                 <div className="container">
                     <motion.div variants={variants} initial="hidden" animate="visible" transition={transitions} className="text-center">
                         <motion.div variants={variants}>

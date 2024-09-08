@@ -22,7 +22,7 @@ export default function Navbar() {
         <motion.header variants={variants} initial="hidden" whileInView="visible" transition={transitions}>
             <div className="mt-10">
                 <div className="container">
-                    <div className="w-[95%] mx-auto p-5 rounded-t-[20px] lg:rounded-[20px] bg-white navbar-shadow relative">
+                    <div className="sm:w-[95%] mx-auto p-5 rounded-t-[20px] lg:rounded-[20px] bg-white navbar-shadow relative">
                         <div className="flex items-center">
                             <Link href="/" className="block mr-auto">
                                 <Image tabIndex={0} src={logo} alt="logo" priority={true} />
