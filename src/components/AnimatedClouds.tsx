@@ -5,7 +5,7 @@ import cloud3 from "media/clouds/3.png"
 // Next
 import Image from "next/image"
 // Framer
-import * as motion from "framer-motion/client"
+// import * as motion from "framer-motion/client"
 
 export default function AnimatedClouds() {
     return (
