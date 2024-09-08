@@ -15,8 +15,8 @@ export default function Navbar() {
         "hidden": { opacity: 0, y: -40 },
         "visible": { opacity: 1, y: 0 }
     }
-    const transitions = { duration: 0.3, ease: "easeIn" }
-    // let transitions = { type: "spring", stiffness: 200, damping: 100 }
+    // const transitions = { duration: 0.3, ease: "easeIn" }
+    let transitions = { type: "spring", stiffness: 50 }
 
     return (
         <motion.header variants={variants} initial="hidden" whileInView="visible" transition={transitions}>

@@ -1,18 +1,21 @@
 // Components
-import { CTA } from "@/components"
+import { CTA, VideoPlayer } from "@/components"
 // Framer
 import * as motion from "framer-motion/client"
+// Media
+import thumbnail from "media/default-thumbnail.png"
 
 export default function Hero() {
     const variants = {
-        "hidden": { opacity: 0, y: 40, },
+        "hidden": { opacity: 0, y: 48 },
         "visible": { opacity: 1, y: 0 }
     }
-    const transitions = { duration: 0.3, ease: "easeIn", staggerChildren: 0.3 }
-    
+    // const transitions = { duration: 0.3, ease: "easeIn", staggerChildren: 0.3 }
+    const transitions = { type: "spring", stiffness: 50, staggerChildren: 0.3 }
+
     return (
         <section>
-            <div className="mt-10">
+            <div className="mt-12">
                 <div className="container">
                     <motion.div variants={variants} initial="hidden" animate="visible" transition={transitions} className="text-center">
                         <motion.div variants={variants}>
@@ -28,6 +31,13 @@ export default function Hero() {
                         </motion.div>
                         <motion.div variants={variants}>
                             <CTA />
+                        </motion.div>
+                        <motion.div variants={variants} className="mt-14">
+                            <VideoPlayer
+                                src="/default-video.mp4"
+                                thumbnail={thumbnail}
+                                css="max-w-[1000px]"
+                            />
                         </motion.div>
                     </motion.div>
                 </div>
