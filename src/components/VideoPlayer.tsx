@@ -2,7 +2,7 @@
 // React
 import { useState, useRef } from "react"
 // Next
-import { StaticImageData } from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 interface VideoPlayerProps {
     src: string
@@ -35,19 +35,19 @@ export default function VideoPlayer({ src, thumbnail, css }: VideoPlayerProps) {
             handlePlay();
         }
     }
-    const thumbnailUrl = typeof thumbnail === "string" ? thumbnail : thumbnail.src
+    const thumbnailUrl = typeof thumbnail === "string" ? thumbnail : thumbnail
     return (
         <div className={`relative rounded-3xl overflow-hidden mx-auto border-2 border-[#000000] ${css}`}>
             {!isPlaying && (
                 <div className="relative cursor-pointer" onClick={handlePlay}>
-                    <img src={thumbnailUrl} alt="thumbnail" className="w-full h-auto" />
+                    <Image src={thumbnailUrl} alt="thumbnail" className="w-full h-auto" />
                 </div>
             )}
             <video
                 ref={videoRef}
                 src={src}
                 className={`w-full h-auto ${isPlaying ? "block" : "hidden"}`}
-                controls
+                preload="none"
                 onClick={handleClick}
                 onPause={handlePause}
                 onEnded={handlePause}
