@@ -29,6 +29,16 @@ const config: Config = {
       colors: {
         "body": "#fff9e9",
         "dots": "#909A3A"
+      },
+      animation: {
+        'clouds': 'clouds 10s -3s linear infinite',
+      },
+      keyframes: {
+        clouds: {
+          '0%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-25%)' },
+          '100%': { transform: 'translateX(-50%)' }
+        }
       }
     },
   },

@@ -1,7 +1,7 @@
 // Media
 import cloud1 from "media/clouds/1.png"
-import cloud2 from "media/clouds/2.png"
-import cloud3 from "media/clouds/3.png"
+// import cloud2 from "media/clouds/2.png"
+// import cloud3 from "media/clouds/3.png"
 // Next
 import Image from "next/image"
 // Framer
@@ -10,9 +10,9 @@ import Image from "next/image"
 export default function AnimatedClouds() {
     return (
         <div className="relative">
-            <Image src={cloud3} alt="cloud3" className="absolute bottom-[60px] left-0 right-0 w-full h-auto z-[1] max-h-[720px]" />
-            <Image src={cloud2} alt="cloud2" className="absolute bottom-[30px] left-0 right-0 w-full h-auto z-[2] max-h-[596px]" />
-            <Image src={cloud1} alt="cloud1" className="w-full max-w-[100%] relative z-[3] h-auto max-h-[620px]" />
+            <div className="bg-[url('/clouds/3.png')] absolute h-[100%] w-[200%] [animation:clouds_10s_-3s_linear_infinite;] object-cover bottom-[60px] object-top left-0 right-0 z-[1] max-h-[720px][transform:translate3d(0,_0,_0)]"></div>
+            <div className="bg-[url('/clouds/2.png')] absolute h-[100%] w-[200%] [animation:clouds_18s_linear_reverse_infinite;] bottom-[30px]  object-cover object-top left-0 right-0 z-[2] max-h-[596px] [transform:translate3d(0,_0,_0)]"></div>
+            <Image src={cloud1} alt="cloud1" className="z-[4] relative" />
         </div>
     )
 }

@@ -10,12 +10,11 @@ export default function Hero() {
         "hidden": { opacity: 0, y: 48 },
         "visible": { opacity: 1, y: 0 }
     }
-    // const transitions = { duration: 0.3, ease: "easeIn", staggerChildren: 0.3 }
-    const transitions = { type: "spring", stiffness: 50, staggerChildren: 0.3 }
+    const transitions = { type: "spring", stiffness: 100, damping: 10, staggerChildren: 0.3 }
 
     return (
         <section>
-            <div className="mt-12 relative z-10">
+            <div className="mt-12 relative z-10 overflow-hidden">
                 <div className="absolute left-0 right-0 top-[230px] -z-10">
                     <AnimatedClouds />
                 </div>
